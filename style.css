@@ -136,7 +136,7 @@ h3.text_color {
 }
 
 .flip-container:hover .flipper {
-    transform: rotateX(180deg);
+    transform: rotateX(-180deg);
 }
 
 .front,
@@ -146,14 +146,18 @@ h3.text_color {
 }
 
 .flipper {
+    -webkit-transition: 0.5s;
     transition: 0.5s;
+    -webkit-transform-style: preserve-3d;
     transform-style: preserve-3d;
     position: relative;
+    -webkit-transform-origin: 100% 175px;
     transform-origin: 100% 175px;
 }
 
 .front,
 .back {
+    -webkit-backface-visibility: hidden;
     backface-visibility: hidden;
     position: absolute;
     top: 0;
@@ -173,7 +177,7 @@ h3.text_color {
 }
 
 .back {
-    transform: rotateX(180deg);
+    transform: rotateX(-180deg);
     display: flex;
     flex-flow: column;
     align-items: center;
