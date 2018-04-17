@@ -979,6 +979,13 @@ a {
         padding-left: 0;
         padding-right: 0;
     }
+    #card_img_main {
+        display: block;
+    }
+    #card_img_main>div {
+        height: 350px;
+        width: 100%;
+    }
 }
 
 @media (max-width: 991px) {
